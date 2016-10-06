@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainTheme"
+    android:background="@color/black"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.cryptogram.MainActivity"
+    tools:showIn="@layout/activity_main">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:id="@+id/back"
+    android:orientation="vertical"
+    android:background="@drawable/code">
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="118dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="Cryptogram"
+        android:shadowColor="@color/cyan"
+        android:shadowDx="4"
+        android:shadowDy="4"
+        android:shadowRadius="8"
+        android:id="@+id/title"
+        android:textSize="67dp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"/>
+
+</LinearLayout>
+
+</RelativeLayout>

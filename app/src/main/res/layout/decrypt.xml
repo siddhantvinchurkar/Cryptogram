@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/dback"
+    android:background="@color/black">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/msg_decrypt"
+        android:layout_height="100dp"
+        android:hint=" Enter the message you \n want to decrypt here"
+        android:background="@color/darkgrey"
+        android:textColor="@color/white"
+        android:textColorHint="@color/grey"
+        android:imeOptions="actionNext"
+        android:imeActionLabel="Next"
+        android:textAllCaps="false"
+        android:maxLines="3"
+        android:scrollHorizontally="false"
+        android:maxLength="104"
+        android:digits="0,1,2,3,4,5,6,7,8,9,qwertyuiopasdfghjklzxcvbnm,/,*,+,-,!,@,#,$,%,^,*,(,),_,&amp;"
+        android:inputType="textMultiLine|textVisiblePassword"/>
+    
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/paste"
+        android:background="@color/colorPrimary"
+        android:text="Paste From Clipboard  "
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:drawableLeft="@drawable/paste"
+        android:textAllCaps="true"
+        android:textAlignment="viewEnd"
+        android:layout_gravity="end"
+        android:visibility="invisible"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/key_decrypt"
+        android:layout_height="50dp"
+        android:maxLength="4"
+        android:background="@color/darkgrey"
+        android:imeOptions="actionDone"
+        android:textColor="@color/white"
+        android:hint="Enter Decryption Key here"
+        android:textColorHint="@color/grey"
+        android:textAllCaps="false"
+        android:inputType="number"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="180dp" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/ad_unit_id">
+    </com.google.android.gms.ads.AdView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:id="@+id/btn_decrypt"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:text="Decrypt"
+        android:textAlignment="center"
+        android:textSize="55dp"
+        android:background="@color/colorPrimaryDark"/>
+    
+</LinearLayout>

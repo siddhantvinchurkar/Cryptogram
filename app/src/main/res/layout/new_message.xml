@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/eback"
+    android:background="@color/black">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <EditText
+    android:layout_width="match_parent"
+    android:id="@+id/message"
+    android:layout_height="100dp"
+    android:hint=" Enter your message here. \n (No special characters!) \n You can use \' - \' to seperate words."
+    android:background="@color/darkgrey"
+    android:textColor="@color/white"
+    android:textColorHint="@color/grey"
+    android:textAllCaps="false"
+        android:maxLines="3"
+        android:scrollHorizontally="false"
+    android:maxLength="100"
+    android:inputType="textMultiLine|textVisiblePassword"
+        android:digits="0,1,2,3,4,5,6,7,8,9,qwertyuiopasdfghjklzxcvbnm,QWERTYUIOPASDFGHJKLZXCVBNM,/,*,+,-,=_,!,?"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/liveCcount"
+            android:layout_height="150dp"
+            android:textAlignment="center"
+            android:text="\n\t\t\t\t\t\t\t\t\t\t\t\t\t100 characters left"
+            android:textColor="@color/grey"/>
+
+       <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textAllCaps="false"
+        android:id="@+id/preview"
+        android:hint="Start typing to preview the encrypted message"
+        android:textAlignment="center"
+           android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="30dp"/>
+
+    </LinearLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/ad_unit_id">
+    </com.google.android.gms.ads.AdView>
+
+</LinearLayout>

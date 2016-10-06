@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.cryptogram.MainActivity">
+    <item
+        android:id="@+id/settings"
+        android:orderInCategory="50"
+        android:title="Settings"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/settings"/>
+</menu>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <SwitchPreference
+        android:enabled="true"
+        android:checked="false"
+        android:defaultValue="false"
+        android:key="set_en"
+        android:summary="If disabled, default settings will be used"
+        android:title="Enable Settings"/>
+    <PreferenceCategory
+        android:title="General"
+        android:enabled="true"
+        android:dependency="set_en">
+    <CheckBoxPreference
+        android:key="confirm"
+        android:title="Confirm Actions"
+        android:icon="@drawable/done"
+        android:summary="If checked, all your actions will be confirmed first"
+        android:defaultValue="true" />
+        <CheckBoxPreference
+            android:key="def"
+            android:title="Use Default App"
+            android:icon="@drawable/puzzle"
+            android:summary="If checked, the app listed below will open up by default when you send a message"
+            android:defaultValue="false" />
+        <ListPreference
+            android:title="Choose Default App"
+            android:dependency="def"
+            android:key="defapp"
+            android:dialogIcon="@drawable/puzzle"
+            android:entries="@array/DefaultApps"
+            android:summary="Select a default app to send messages"
+            android:entryValues="@array/DefaultAppsValues"
+            android:defaultValue="com.android.mms"/>
+        <SwitchPreference
+            android:key="pass"
+            android:title="Enable Pass Code"
+            android:checked="false"
+            android:icon="@drawable/pass"
+            android:summary="Use pass code for added security"
+            android:defaultValue="false" />
+        <EditTextPreference
+            android:key="passcode"
+            android:title="Set Pass Code"
+            android:dialogIcon="@drawable/pass"
+            android:dependency="pass"
+            android:summary="Set passcode to use"
+            android:maxLength="4"
+            android:inputType="numberPassword" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="Appearance"
+        android:enabled="true"
+        android:dependency="set_en">
+        <ListPreference
+            android:title="Select Theme"
+            android:key="theme"
+            android:icon="@drawable/style"
+            android:dialogIcon="@drawable/style"
+            android:summary="Choose between two contrasting themes"
+            android:entries="@array/Theme"
+            android:defaultValue="1"
+            android:entryValues="@array/ThemeValues"
+            />
+        </PreferenceCategory>
+    <PreferenceCategory
+        android:title="Other"
+        android:enabled="true">
+        <Preference
+            android:title="Privacy Policy"
+            android:icon="@drawable/privacy"
+            android:summary="Tap here to view the privacy policy">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="http://volatileinc.netai.net"/>
+        </Preference>
+        <Preference
+            android:title="Rate This App"
+            android:icon="@drawable/rate"
+            android:summary="Tap here to rate this app on the Play Store">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://play.google.com/store/apps/details?id=com.volatile.cryptogram"/>
+        </Preference>
+        <Preference
+            android:title="Version"
+            android:icon="@drawable/version"
+            android:summary="1.7 - public">
+            <intent android:targetPackage="com.volatile.cryptogram"
+                android:targetClass="com.cryptogram.EasterEgg"/>
+            </Preference>
+    </PreferenceCategory>
+</PreferenceScreen>
